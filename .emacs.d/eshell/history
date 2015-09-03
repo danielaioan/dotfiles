@@ -1,7 +1,0 @@
-bundle install
-rspec
-rspec
-cd ..
-cd ..
-cd ..
-rspec

@@ -1,7 +1,7 @@
 # Installation
 
 ```
-git clone git@github.com:squiter/dotfiles.git ~/
+git clone git@github.com:arthurix/dotfiles.git ~/
 git submodule update --init
 ```
 

@@ -12,5 +12,8 @@
 .*.swo
 .*~
 .emacs.d/auto-save-list
+!.emacs.d/themes
+!.emacs.d/conf
+!.emacs.d/.emacs
 .bash_history
 .vim/.netrwhist
