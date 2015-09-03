@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/arthuroliveira/.vim/bundle'
-let g:netrw_dirhist_2='/Users/arthuroliveira'
-let g:netrw_dirhist_3='/Users/arthuroliveira/Workspace/projects/paas/hosting-services'
-let g:netrw_dirhist_4='/Users/arthuroliveira/Workspace/projects/paas/hodor'
-let g:netrw_dirhist_5='/Users/arthuroliveira/.vim'
