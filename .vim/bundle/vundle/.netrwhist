@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/arthur'
+let g:netrw_dirhist_2='/Users/arthur/projects/sledge/sledge-app'
+let g:netrw_dirhist_3='/Users/arthur'
+let g:netrw_dirhist_4='/Users'
+let g:netrw_dirhist_5='/Users/arthur/.vim'
+let g:netrw_dirhist_6='/Users/arthur/projects/sledge'
+let g:netrw_dirhist_7='/Users/arthur/projects'

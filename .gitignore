@@ -1,0 +1,15 @@
+/*
+!.gitignore
+!.vimrc
+!.bashrc
+!.vim/
+!.emacs.d
+!.emacs
+!README.md
+!install.sh
+!.bash*
+.*.swp
+.*.swo
+.*~
+.emacs.d/auto-save-list
+.bash_history
