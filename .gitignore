@@ -13,3 +13,4 @@
 .*~
 .emacs.d/auto-save-list
 .bash_history
+.vim/.netrwhist
