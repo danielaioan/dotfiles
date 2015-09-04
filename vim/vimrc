@@ -50,7 +50,7 @@ set list
 set listchars=tab:\ ¬,trail:.
 
 " nice statusline
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ %{fugitive#statusline()}
+"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ %{fugitive#statusline()}
 
 " enabling mouse
 set mouse=a
@@ -88,16 +88,3 @@ endif
 set guifont=Inconsolata-g:h14
 colorscheme vibrantink
 "let g:nerdtree_tabs_open_on_console_startup=1
-
-let g:SimpylFold_docstring_preview = 1
-let g:SimpylFold_fold_docstring = 0
-
-autocmd BufWinEnter *.rb setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
-autocmd BufWinLeave *.rb setlocal foldexpr< foldmethod<
-
-let g:vimrubocop_keymap = 0
-let g:vimrubocop_config = './.rubocop.yml'
-
-let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
