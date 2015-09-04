@@ -1,12 +1,6 @@
 # Installation
 
 ```
-git clone git@github.com:arthurix/dotfiles.git ~/
-git submodule update --init
-```
-
-# Raw Installation
-
-```
+git clone https://github.com/arthurix/dotfiles.git ~/dotfiles
 sh install.sh
 ```
