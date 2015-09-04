@@ -18,4 +18,4 @@
 (require 'init-web-mode)
 (require 'init-yaml)
 (require 'init-indent-guide)
-;;(require 'enh-ruby-mode)
+(require 'inf-ruby)

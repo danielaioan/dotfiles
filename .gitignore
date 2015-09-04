@@ -3,8 +3,10 @@
 .*.swo
 .*~
 emacs/auto-save-list
+emacs/elpa
+emacs/*elpa*
+emacs/projectile-bookmarks.eld
 vim/.netrwhist
-
 
 # DO NOT IGNORE
 !.gitignore
