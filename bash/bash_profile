@@ -118,7 +118,7 @@ function color_my_prompt {
   local __prompt_tail="$Purple$"
   local __last_color="$Color_Off"
 
-  export PS1=$LIGHT_GRAY"$__time $CUSTOM_USER $__user"'$(
+  export PS1=$LIGHT_GRAY"$__time $CUSTOM_USER $__user $CUSTOM_PWD\w$__last_color"'$(
     if [[ $(__git_ps1) =~ \*\)$ ]]
     # a file has been modified but not added
     then echo "'$YELLOW'"$(__git_ps1 " (%s)")
@@ -127,7 +127,7 @@ function color_my_prompt {
     then echo "'$MAGENTA'"$(__git_ps1 " (%s)")
     # the state is clean, changes are commited
     else echo "'$CYAN'"$(__git_ps1 " (%s)")
-    fi)'$CUSTOM_PWD" \w"$CUSTOM_LAST":$__last_color\n"
+    fi)'$CUSTOM_LAST":$__last_color\n"
 }
 color_my_prompt
 
