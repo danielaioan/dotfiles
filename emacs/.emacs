@@ -23,3 +23,4 @@
 (require 'company-robe)
 (require 'ac-robe)
 (require 'rspec-mode)
+(require 'ruby-tools)
