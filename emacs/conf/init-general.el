@@ -31,3 +31,10 @@
 (provide 'init-general)
 
 ;;(add-hook 'after-init-hook 'inf-ruby -switch-setup)
+
+(defalias 'redo 'undo-tree-redo)
+(global-set-key (kbd "C-z") 'undo) ; 【Ctrl+z】
+
+(global-set-key (kbd "C-S-z") 'redo) ; 【Ctrl+Shift+z】;  Mac style
+
+(global-set-key (kbd "C-y") 'redo) ; 【Ctrl+y】; Microsoft Windows style

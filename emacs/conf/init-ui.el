@@ -1,6 +1,7 @@
 ;; theme options
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'vibrant-ink t)
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/base16")
+(load-theme 'zen-and-art t)
 
 (setq
  ;; better startup
