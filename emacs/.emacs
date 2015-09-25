@@ -20,7 +20,7 @@
 (require 'init-ruby)
 (require 'ruby-tools)
 (require 'rspec-mode)
-(require 'init-guide-key)
+;;(require 'init-guide-key)
 
 (add-to-list 'load-path (expand-file-name "conf/rails-reloaded" user-emacs-directory))
   (require 'rails-autoload)
@@ -46,7 +46,6 @@
  (message "VCR is ON"))
  (setenv "VCR_OFF" "true")
  (message "VCR is OFF")))
-
 (global-set-key (kbd "M-0") 'custom/vcr-toggle)
 
 
@@ -58,7 +57,6 @@
  (message "ENABLE_REMOTE_FACTORY_GIRL is ON"))
  (setenv "ENABLE_REMOTE_FACTORY_GIRL" "true")
  (message "ENABLE_REMOTE_FACTORY_GIRL is OFF")))
-
 (global-set-key (kbd "M-9") 'custom/remote-factory-toggle)
 
 
