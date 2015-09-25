@@ -146,6 +146,8 @@ alias glg='git log --date-order --all --graph --format="%C(green)%h%Creset %C(ye
 alias glg2='git log --date-order --all --graph --name-status --format="%C(green)%H%Creset %C(yellow)%an%Creset %C(blue bold)%ar%Creset %C(red bold)%d%Creset%s"'
 alias grh='git reset --hard'
 
+alias be='bundle exec'
+
 alias projects="cd ~/Workspace/projects/paas"
 
 # ls alias for color-mode
@@ -180,9 +182,10 @@ alias clean="sudo sync;sudo purge;"
 alias pg="'/Library/PostgreSQL/9.4/bin/psql' --host 'localhost' --port 5432 --username 'postgres'"
 
 #projects
+alias hodor_test="cd ~/Workspace/projects/paas/hodor/; bundle exec rake db:drop db:create db:migrate db:seed RAILS_ENV=test; VCR_OFF=true bundle exec rspec spec"
 alias hodor="cd ~/Workspace/projects/paas/hodor/; bundle exec rails s -p 3002"
-alias product="cd ~/Workspace/projects/paas/product-manager/; bundle exec rails s -p 3000"
-alias recipes="cd ~/Workspace/projects/paas/recipes-manager/; bundle exec rails s -p 3001"
+alias product="bundle exec rake db:drop db:create db:migrate db:seed; cd ~/Workspace/projects/paas/product-manager/; ENABLE_REMOTE_FACTORY_GIRL=true bundle exec rails s -p 3000"
+alias recipes="bundle exec rake db:drop db:create db:migrate db:seed; cd ~/Workspace/projects/paas/recipes-manager/; bundle exec rails s -p 3001"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
