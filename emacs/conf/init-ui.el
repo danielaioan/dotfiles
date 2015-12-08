@@ -3,6 +3,13 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/base16")
 (load-theme 'zen-and-art t)
 
+(deftheme untitled "DOCSTRING preferred color for comments")
+(custom-theme-set-faces 'untitled
+                        '(font-lock-comment-face ((t (:foreground "#714e7a" ))))
+                        '(font-lock-comment-delimiter-face ((t (:foreground "#714e7a" ))))
+                        )
+
+
 (setq
  ;; better startup
  inhibit-splash-screen t
