@@ -53,6 +53,20 @@ ln -sfi ~/dotfiles/bash/bash_profile ~/.bash_profile
 ln -sfi ~/dotfiles/bash/git-completion.bash ~/.git-completion.bash
 ln -sfi ~/dotfiles/bash/git-prompt.sh ~/.git-prompt.sh
 
+echo "$Green Configuring vagrant links using Copy path $Color_Off"
+if [ -s ~/Vagrantfile ]; then
+  rm -rf ~/Vagrantfile.bkp
+  rm -rf ~/.vagrant.bkp
+  rm -rf ~/.vagrant.d.bkp
+  mv ~/Vagrantfile ~/Vagrantfile.bkp
+  mv ~/.vagrant ~/.vagrant.bkp
+  mv ~/.vagrant.d ~/.vagrant.d.bkp
+fi
+ln -sfi ~/Copy/Work/VM/Vagrant/Vagrantfile ~/Vagrantfile
+ln -sfi ~/Copy/Work/VM/Vagrant/.vagrant ~/.vagrant
+ln -sfi ~/Copy/Work/VM/Vagrant/.vagrant.d ~/.vagrant.d
+
+
 
 echo "$Green Reloading bash_profile $Color_Off\n"
 source ~/.bash_profile
