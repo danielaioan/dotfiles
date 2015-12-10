@@ -98,7 +98,7 @@ Jobs="\j"
 
 #export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
-export EDITOR=mvim
+export EDITOR=emacs
 GIT_PS1_SHOWDIRTYSTATE=true
 export LS_OPTIONS='--color=auto'
 export CLICOLOR='Yes'
