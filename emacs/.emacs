@@ -19,8 +19,12 @@
 (require 'init-indent-guide)
 (require 'init-ruby)
 (require 'ruby-tools)
-(require 'rspec-mode)
+;;(require 'rspec-mode)
 ;;(require 'init-guide-key)
+
+(add-to-list 'load-path (expand-file-name "conf/rspec-mode" user-emacs-directory))
+  (require 'rspec-mode)
+
 
 (add-to-list 'load-path (expand-file-name "conf/emacs-rails-reloaded" user-emacs-directory))
   (require 'rails-autoload)
@@ -59,3 +63,30 @@
  (message "ENABLE_REMOTE_FACTORY_GIRL is OFF")))
 (global-set-key (kbd "M-9") 'custom/remote-factory-toggle)
 
+
+(add-hook 'php-mode-hook '(lambda ()
+  (auto-complete-mode t)
+  (require 'ac-php)
+  (setq ac-sources  '(ac-source-php ) )
+  (yas-global-mode 1)
+
+  (define-key php-mode-map  (kbd "C-]") 'ac-php-find-symbol-at-point)   ;goto define
+  (define-key php-mode-map  (kbd "C-t") 'ac-php-location-stack-back   ) ;go back
+))
+
+
+(unless (package-installed-p 'crux)
+  (package-refresh-contents)
+  (package-install 'crux))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(send-mail-function (quote mailclient-send-it)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
