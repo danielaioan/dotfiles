@@ -145,8 +145,10 @@ alias gpu='git push'
 alias glg='git log --date-order --all --graph --format="%C(green)%h%Creset %C(yellow)%an%Creset %C(blue bold)%ar%Creset %C(red bold)%d%Creset%s"'
 alias glg2='git log --date-order --all --graph --name-status --format="%C(green)%H%Creset %C(yellow)%an%Creset %C(blue bold)%ar%Creset %C(red bold)%d%Creset%s"'
 alias grh='git reset --hard'
+alias greset='git reset --hard'
 
 alias be='bundle exec'
+alias bi='bundle install'
 
 alias projects="cd ~/Workspace/projects/paas"
 
@@ -187,5 +189,13 @@ alias hodor="cd ~/Workspace/projects/paas/hodor/; bundle exec rails s -p 3002"
 alias product="bundle exec rake db:drop db:create db:migrate db:seed; cd ~/Workspace/projects/paas/product-manager/; ENABLE_REMOTE_FACTORY_GIRL=true bundle exec rails s -p 3000"
 alias recipes="bundle exec rake db:drop db:create db:migrate db:seed; cd ~/Workspace/projects/paas/recipes-manager/; bundle exec rails s -p 3001"
 
+
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+export RBENV_ROOT=/usr/local/var/rbenv
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+alias docker_start="bash --login /Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh"
+
