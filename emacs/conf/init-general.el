@@ -1,5 +1,5 @@
 ;;Starts on fullscreen mode
-(run-with-idle-timer 0.1 nil 'toggle-frame-fullscreen)
+;;(run-with-idle-timer 0.1 nil 'toggle-frame-fullscreen)
 
 ;; Starts maximized
 ;;(custom-set-variables
