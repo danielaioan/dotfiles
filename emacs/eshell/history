@@ -94,3 +94,5 @@ bundle exec rails c
 bundle install
 bundle install
 exit
+ls -la
+bundle install

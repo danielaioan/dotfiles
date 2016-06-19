@@ -2,11 +2,13 @@
 .*.swp
 .*.swo
 .*~
+*~
 emacs/auto-save-list
 emacs/elpa
 emacs/*elpa*
 emacs/projectile-bookmarks.eld
 vim/.netrwhist
+.DS_Store
 
 # DO NOT IGNORE
 !.gitignore

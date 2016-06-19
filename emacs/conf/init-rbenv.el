@@ -1,6 +1,6 @@
-(require 'rbenv)
+(setq rbenv-installation-dir "~/.rbenv")
 
-(setq rbenv-installation-dir "~/")
+(require 'rbenv)
 
 (global-rbenv-mode)
 

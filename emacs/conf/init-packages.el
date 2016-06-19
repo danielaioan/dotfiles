@@ -1,55 +1,81 @@
 ;;; init=packages.el --- List and management of my packages
 
-;;; commentary:
 ;; That file contains my-packages list and a dolist function that install each package
 ;; This idea of managing packages was stolen from: https://github.com/rranelli/emacs-dotfiles
 
-;;; code:
 (require 'package)
-(package-initialize)
+
+;;(add-to-list 'package-archives
+;;             '("melpa" . "https://melpa.org/packages/"))
+;;(when (< emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+;;  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 
 (add-to-list 'package-archives
-	     '("melpa" . "http://melpa.milkbox.net/packages/") t)
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(package-initialize)
+
 
 (defvar my-packages
   '(
+      ac-inf-ruby
+      ac-php
 ;;    ace-window
-;;   auto-package-update
+      async
+      auto-complete
+;;    auto-package-update
 ;;    avy
 ;;    bundler
-;;    company
+      company
+;;    company-inf-ruby
 ;;    company-emoji
+;;    column-marker
+      dash
+      dash-functional
 ;;    dash-at-point
 ;;    discover-my-major
 ;;    easy-kill
+      eshell
 ;;    expand-region
+      fill-column-indicator
 ;;    floobits
 ;;    flycheck
 ;;    git-gutter
 ;;    git-timemachine
 ;;    guide-key
-    helm
+      helm
 ;;    helm-ag
-    helm-projectile
-    indent-guide
+      helm-robe
+      helm-projectile
+      highlight-indentation
+      indent-guide
+      inf-ruby
 ;;    ido-vertical-mode
-    magit
-;;    neotree
-    projectile
-;;    projectile-rails
-    rbenv
+      magit
+      neotree
+      php-mode
+      popup
+      projectile
+      projectile-rails
+      rake
+;;    rbenv
 ;;    restclient
-    rspec-mode
-    rubocop
-;;    smartparens
+      robe
+      rspec-mode
+      ruby-test-mode
+      ruby-tools
+      rubocop
+      rvm
+      smartparens
+      undo-tree
 ;;    wakatime-mode
-    web-mode
-    yaml-mode
-;;    yasnippet
-    )
+      web-mode
+      yaml-mode
+      yasnippet
+      elixir-yasnippets
+)
   "A list of packages to be installed at application lauch.")
 
-;; package loading (stolen from chuck that stoled from milhouse)
 (setq packaged-contents-refreshed-p nil)
 (dolist (p my-packages)
   (when (not (package-installed-p p))
