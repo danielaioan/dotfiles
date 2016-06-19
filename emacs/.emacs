@@ -1,8 +1,5 @@
 ;; -*- mode: lisp -*-
 
-;;Starts on fullscreen mode
-(run-with-idle-timer 0.1 nil 'toggle-frame-fullscreen)
-
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/conf" user-emacs-directory))
 
 (require 'init-constants)
