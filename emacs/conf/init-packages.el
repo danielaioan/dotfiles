@@ -53,6 +53,7 @@
 ;;    ido-vertical-mode
       magit
       neotree
+;;    on-screen
       php-mode
       popup
       projectile

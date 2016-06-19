@@ -67,6 +67,18 @@
         (message "VCR is ON"))
     (setenv "VCR_OFF" "true")
     (message "VCR is OFF")))
+(global-set-key (kbd "M-0") 'custom/vcr-toggle)
+
+;; remote factory girl toggle
+(defun custom/remote-factory-toggle ()
+  (interactive)
+  (if (getenv "ENABLE_REMOTE_FACTORY_GIRL")
+    (progn
+      (setenv "ENABLE_REMOTE_FACTORY_GIRL" nil)
+      (message "ENABLE_REMOTE_FACTORY_GIRL is ON"))
+    (setenv "ENABLE_REMOTE_FACTORY_GIRL" "true")
+    (message "ENABLE_REMOTE_FACTORY_GIRL is OFF")))
+(global-set-key (kbd "M-9") 'custom/remote-factory-toggle)
 
 ;; debbuger utilities
 (defun rr/pry-byebug-jump-to-source ()

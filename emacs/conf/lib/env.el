@@ -11,5 +11,9 @@
 (setenv "LC_ALL" "en_US.utf-8")
 (setenv "LANG" "en_US.utf-8")
 
+;; custom env vars
+(setenv "VCR_OFF" nil)
+(setenv "ENABLE_REMOTE_FACTORY_GIRL" nil)
+
 (provide 'lib/env)
 ;;; env.el ends here

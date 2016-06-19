@@ -37,23 +37,6 @@
 (require 'init-smartparens)
 (require 'init-undo-tree)
 (require 'init-guide-key)
+;;(require 'init-on-screen)
 
-(defun custom/vcr-toggle ()
- (interactive)
- (if (getenv "VCR_OFF")
- (progn
- (setenv "VCR_OFF" nil)
- (message "VCR is ON"))
- (setenv "VCR_OFF" "true")
- (message "VCR is OFF")))
-(global-set-key (kbd "M-0") 'custom/vcr-toggle)
 
-(defun custom/remote-factory-toggle ()
- (interactive)
- (if (getenv "ENABLE_REMOTE_FACTORY_GIRL")
- (progn
- (setenv "ENABLE_REMOTE_FACTORY_GIRL" nil)
- (message "ENABLE_REMOTE_FACTORY_GIRL is ON"))
- (setenv "ENABLE_REMOTE_FACTORY_GIRL" "true")
- (message "ENABLE_REMOTE_FACTORY_GIRL is OFF")))
-(global-set-key (kbd "M-9") 'custom/remote-factory-toggle)
