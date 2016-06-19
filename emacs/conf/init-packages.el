@@ -42,7 +42,7 @@
 ;;    flycheck
 ;;    git-gutter
 ;;    git-timemachine
-;;    guide-key
+      guide-key
       helm
 ;;    helm-ag
       helm-robe
