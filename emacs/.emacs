@@ -38,5 +38,9 @@
 (require 'init-undo-tree)
 (require 'init-guide-key)
 ;;(require 'init-on-screen)
-
+(require 'init-f)
+(require 'init-flycheck)
+(require 'init-rubocop)
+(require 'init-ruby-end)
+(require 'init-ws-butler)
 

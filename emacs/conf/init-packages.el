@@ -37,9 +37,11 @@
 ;;    easy-kill
       eshell
 ;;    expand-region
+      f
       fill-column-indicator
 ;;    floobits
-;;    flycheck
+      flycheck
+;;    flymake-ruby
 ;;    git-gutter
 ;;    git-timemachine
       guide-key
@@ -59,10 +61,11 @@
       projectile
       projectile-rails
       rake
-;;    rbenv
+      rbenv
 ;;    restclient
       robe
       rspec-mode
+      ruby-end
       ruby-test-mode
       ruby-tools
       rubocop
@@ -71,6 +74,7 @@
       undo-tree
 ;;    wakatime-mode
       web-mode
+      ws-butler
       yaml-mode
       yasnippet
       elixir-yasnippets

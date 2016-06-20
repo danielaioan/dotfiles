@@ -3,21 +3,12 @@
 .*.swo
 .*~
 *~
-emacs/auto-save-list
-emacs/elpa
-emacs/*elpa*
-emacs/projectile-bookmarks.eld
-vim/.netrwhist
+auto-save-list
+elpa
+*elpa*
+projectile-bookmarks.eld
+.netrwhist
 .DS_Store
+emacs/ac-comphist.dat
 
 # DO NOT IGNORE
-!.gitignore
-!README.md
-!emacs
-!emacs/themes
-!emacs/conf
-!emacs/.emacs
-!vim
-!bash
-!vagrant
-!install.sh
