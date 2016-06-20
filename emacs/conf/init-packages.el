@@ -47,6 +47,7 @@
       guide-key
       helm
 ;;    helm-ag
+      helm-flycheck
       helm-robe
       helm-projectile
       highlight-indentation
@@ -74,7 +75,7 @@
       undo-tree
 ;;    wakatime-mode
       web-mode
-      ws-butler
+;     ws-butler
       yaml-mode
       yasnippet
       elixir-yasnippets

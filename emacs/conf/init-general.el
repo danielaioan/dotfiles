@@ -28,7 +28,8 @@
       '(not magit-mode git-commit-mode))
 (setq whitespace-style '(face trailing tabs))
 (global-set-key (kbd "C-RET") 'whitespace-cleanup) ; 【Ctrl+Enter】
-(global-set-key (kbd "M-RET") 'whitespace-cleanup-region) ; 【Ctrl+Enter】
+(global-set-key (kbd "C-<return>") 'whitespace-cleanup) ; 【Ctrl+Enter】
+(global-set-key (kbd "M-RET") 'whitespace-cleanup-region) ; 【Meta+Enter】
 
 (provide 'init-general)
 

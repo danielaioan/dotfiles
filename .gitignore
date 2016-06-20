@@ -1,15 +1,8 @@
-/*
-.*.swp
-.*.swo
-.*~
-*~
-auto-save-list
-elpa
-*elpa*
-projectile-bookmarks.eld
-.netrwhist
-.DS_Store
-emacs/ac-comphist.dat
-ac-comphist.dat
+!emacs/*
 
-# DO NOT IGNORE
+*.DS_Store
+emacs/elpa
+*.eld
+vim/.netrwhist 
+*.dat
+emacs/auto-save-list
