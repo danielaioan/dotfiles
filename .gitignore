@@ -10,5 +10,6 @@ projectile-bookmarks.eld
 .netrwhist
 .DS_Store
 emacs/ac-comphist.dat
+ac-comphist.dat
 
 # DO NOT IGNORE
