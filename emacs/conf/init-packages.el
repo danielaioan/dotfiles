@@ -25,7 +25,7 @@
       auto-complete
 ;;    auto-package-update
 ;;    avy
-;;    bundler
+      bundler
       company
 ;;    company-inf-ruby
 ;;    company-emoji
@@ -47,6 +47,7 @@
       guide-key
       helm
 ;;    helm-ag
+      helm-bundle-show
       helm-flycheck
       helm-robe
       helm-projectile
