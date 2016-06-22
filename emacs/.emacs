@@ -34,7 +34,7 @@
 (require 'init-fill-column-indicator)
 (require 'init-dash)
 (require 'init-elixir-yasnippets)
-(require 'init-smartparens)
+;;(require 'init-smartparens)
 (require 'init-undo-tree)
 (require 'init-guide-key)
 ;;(require 'init-on-screen)
