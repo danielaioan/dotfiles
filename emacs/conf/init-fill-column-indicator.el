@@ -1,7 +1,8 @@
 (require 'fill-column-indicator)
 
 (setq fci-rule-width 1)
-(setq fci-rule-color "#111111")
+(setq fci-rule-color "#222222")
+(setq fci-rule-column 80)
 
 ;; Add for ruby projects
 (add-hook 'ruby-mode-hook 'fci-mode)
