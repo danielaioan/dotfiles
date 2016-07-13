@@ -23,11 +23,11 @@
       ac-php
 ;;    ace-window
       async
-      auto-complete
+;;    auto-complete
 ;;    auto-package-update
 ;;    avy
       bundler
-      company
+;;      company
 ;;    company-inf-ruby
 ;;    company-emoji
 ;;    column-marker

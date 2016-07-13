@@ -21,10 +21,6 @@
  '(font-lock-comment-face ((t (:foreground "#a347d1" ))))
 )
 
-;; theme cursor background color
-(set-face-background 'hl-line "#2d3335")
-(set-face-foreground 'highlight nil)
-
 (setq
  ;; better startup
  inhibit-splash-screen t
