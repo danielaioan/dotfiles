@@ -182,8 +182,6 @@ alias flush="dscacheutil -flushcache"
 alias v="mvim ."
 alias clean="sudo sync;sudo purge;"
 
-alias pg="'/Library/PostgreSQL/9.4/bin/psql' --host 'localhost' --port 5432 --username 'postgres'"
-
 #projects
 alias hodor_test="cd ~/Workspace/projects/paas/hodor/; bundle exec rake db:drop db:create db:migrate db:seed RAILS_ENV=test; VCR_OFF=true bundle exec rspec spec"
 alias hodor="cd ~/Workspace/projects/paas/hodor/; bundle exec rails s -p 3002"
@@ -191,7 +189,6 @@ alias product="bundle exec rake db:drop db:create db:migrate db:seed; cd ~/Works
 alias recipes="bundle exec rake db:drop db:create db:migrate db:seed; cd ~/Workspace/projects/paas/recipes-manager/; bundle exec rails s -p 3001"
 
 
-#export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="$HOME/.rbenv/versions/*/bin:$PATH"
 eval "$(rbenv init -)"
@@ -199,6 +196,3 @@ export RBENV_ROOT=~/.rbenv
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
-
-alias docker_start="bash --login /Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh"
-
