@@ -11,6 +11,7 @@
  ;; disable backup files
  make-backup-files nil
  auto-save-default nil
+
  backup-inhibited t
  ;; If a frame alredy opened, use it!
  display-buffer-reuse-frames t
@@ -41,3 +42,16 @@
 (global-set-key (kbd "C-S-z") 'redo) ; 【Ctrl+Shift+z】;  Mac style
 
 (global-set-key (kbd "C-y") 'redo) ; 【Ctrl+y】; Microsoft Windows style
+
+;; duplicate lines
+(defun duplicate-line()
+  (interactive)
+  (move-beginning-of-line 1)
+  (kill-line)
+  (yank)
+  (open-line 1)
+  (next-line 1)
+  (yank)
+  )
+(global-set-key (kbd "C-d") 'duplicate-line) ;【Ctrl+d】
+(global-set-key (kbd "C-p") 'duplicate-line) ;【Ctrl+p】
