@@ -1,11 +1,11 @@
 ;; theme options
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/base16")
-;;(load-theme 'zen-and-art t)
 (load-theme 'vibrant-ink t)
 
 ;;(deftheme vibrant-ink "DOCSTRING preferred color for comments")
-;;(custom-theme-set-faces 'undefined
+
+;(custom-theme-set-faces 'undefined
 ;;                        '(font-lock-comment-face ((t (:foreground "#714e7a" ))))
 ;;                        '(font-lock-comment-delimiter-face ((t (:foreground "#714e7a" ))))
 ;;)
@@ -16,10 +16,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-;; '(default ((t (:stipple nil :background "black" :foreground "gray" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :family "Inconsolata")))))
- '(default ((t (:stipple nil :background "black" :foreground "light gray" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :family "Monaco")))))
-
-
+ '(default ((t (:stipple nil :background "black" :foreground "light gray" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :family "Monaco"))))
+ '(font-lock-string-face ((t (:foreground "#54c444"))))
+ '(font-lock-comment-face ((t (:foreground "#a347d1" ))))
+)
 
 (setq
  ;; better startup

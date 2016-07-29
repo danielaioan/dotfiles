@@ -12,7 +12,8 @@
 ;;  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 
 (add-to-list 'package-archives
-             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+                   '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
 (package-initialize)
 
 
@@ -22,11 +23,11 @@
       ac-php
 ;;    ace-window
       async
-      auto-complete
+;;    auto-complete
 ;;    auto-package-update
 ;;    avy
-;;    bundler
-      company
+      bundler
+;;      company
 ;;    company-inf-ruby
 ;;    company-emoji
 ;;    column-marker
@@ -47,6 +48,8 @@
       guide-key
       helm
 ;;    helm-ag
+      helm-bundle-show
+      helm-flycheck
       helm-robe
       helm-projectile
       highlight-indentation
@@ -71,9 +74,11 @@
       rubocop
       rvm
       smartparens
+      sml-mode
       undo-tree
 ;;    wakatime-mode
       web-mode
+;     ws-butler
       yaml-mode
       yasnippet
       elixir-yasnippets

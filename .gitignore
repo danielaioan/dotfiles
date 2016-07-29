@@ -1,11 +1,11 @@
 .*.swp
 .*.swo
 *~
-auto-save-list
-elpa
 *elpa*
-projectile-bookmarks.eld
 .netrwhist
 .DS_Store
 /emacs/ac-comphist.dat
-ac-comphist.dat
+/emacs/elpa
+/emacs/auto-save-list
+*.eld
+*.dat

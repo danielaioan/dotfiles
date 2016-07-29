@@ -14,6 +14,7 @@
 ;; custom env vars
 (setenv "VCR_OFF" nil)
 (setenv "ENABLE_REMOTE_FACTORY_GIRL" nil)
+(setenv "BUNDLE_GEMFILE")
 
 (provide 'lib/env)
 ;;; env.el ends here
