@@ -1,0 +1,58 @@
+alias projects='cd ~/Workspace/projects'
+
+# git commamands simplified
+alias gs='git status'
+alias gck='git checkout'
+alias gco='git commit'
+alias grb='git rebase'
+alias gbr='git branch'
+alias ga='git add -p'
+alias gpull='git pull'
+alias gp='git push'
+alias gl='git log --date-order --all --graph --format="%C(green)%h%Creset %C(yellow)%an%Creset %C(blue bold)%ar%Creset %C(red bold)%d%Creset%s"'
+alias gl2='git log --date-order --all --graph --name-status --format="%C(green)%H%Creset %C(yellow)%an%Creset %C(blue bold)%ar%Creset %C(red bold)%d%Creset%s"'
+alias grh='git reset --hard'
+alias greset='git reset --hard'
+
+alias be='bundle exec'
+alias bi='bundle install'
+alias br='bundle exec rspec'
+
+alias projects="cd ~/Workspace/projects/"
+
+# ls alias for color-mode
+alias ls='ls -lhaG'
+
+# lock computer
+alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
+
+# hibernation and sleep settings
+alias hibernate='sudo pmset -a hibernatemode 25'
+alias sleep='sudo pmset -a hibernatemode 0'
+alias safesleep='sudo pmset -a hibernatemode 3'
+alias smartsleep='sudo pmset -a hibernatemode 2'
+
+# up 'n' folders
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+
+# grep with color
+alias grep='grep --color=auto'
+
+# refresh shell
+alias reload='source ~/.bash_profile'
+
+alias flushcache="dscacheutil -flushcache"
+alias flush="dscacheutil -flushcache"
+alias v="mvim ."
+alias clean="sudo sync;sudo purge;"
+
+alias pg="'/Library/PostgreSQL/9.4/bin/psql' --host 'localhost' --port 5432 --username 'postgres'"
+
+#projects
+alias hodor_test="cd ~/Workspace/projects/paas/hodor/; bundle exec rake db:drop db:create db:migrate db:seed RAILS_ENV=test; VCR_OFF=true bundle exec rspec spec"
+alias hodor="cd ~/Workspace/projects/paas/hodor/; bundle exec rails s -p 3002"
+alias product="bundle exec rake db:drop db:create db:migrate db:seed; cd ~/Workspace/projects/paas/product-manager/; ENABLE_REMOTE_FACTORY_GIRL=true bundle exec rails s -p 3000"
+alias recipes="bundle exec rake db:drop db:create db:migrate db:seed; cd ~/Workspace/projects/paas/recipes-manager/; bundle exec rails s -p 3001"

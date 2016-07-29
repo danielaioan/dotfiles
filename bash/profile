@@ -1,0 +1,49 @@
+# git command autocompletion script
+source ~/.bash/git-completion
+source ~/.bash/git-prompt
+source ~/.bash/colors
+source ~/.bash/alias
+
+# Various variables you might want for your PS1 prompt instead
+Time12h="\T"
+Time12a="\@"
+PathShort="\w"
+PathFull="\W"
+NewLine="\n"
+Jobs="\j"
+
+function color_my_prompt {
+  local __user_and_host="\[\033[1;32m\]\u@\[\e[1;36m\]\h"
+  local __user="\u$Color_Off"
+  local __host="\h$Color_Off"
+  local __time="$IBlack[$Time12h]$Color_Off"
+  local __date_and_time="$IBlack[\d $Time12h]$Color_Off"
+  local __cur_location="$Cyan$PathShort$Color_Off"
+  local __git_branch_color="$Yellow"
+  #local __git_branch="\`ruby -e \"print (%x{git branch 2> /dev/null}.grep(/^\*/).first || '').gsub(/^\* (.+)$/, '(\1) ')\"\`"
+  local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
+  local __prompt_tail="$Purple$"
+  local __last_color="$Color_Off"
+
+  export PS1=$LIGHT_GRAY"$__time $CUSTOM_USER $__user $CUSTOM_PWD\w$__last_color"'$(
+    if [[ $(__git_ps1) =~ \*\)$ ]]
+    # a file has been modified but not added
+    then echo "'$YELLOW'"$(__git_ps1 " (%s)")
+    elif [[ $(__git_ps1) =~ \+\)$ ]]
+    # a file has been added, but not commited
+    then echo "'$MAGENTA'"$(__git_ps1 " (%s)")
+    # the state is clean, changes are commited
+    else echo "'$CYAN'"$(__git_ps1 " (%s)")
+    fi)'$CUSTOM_LAST":$__last_color\n"
+}
+color_my_prompt
+
+#rbenv path
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/shims:$PATH"
+export PATH="$HOME/.rbenv/versions/*/bin:$PATH"
+eval "$(rbenv init -)"
+export RBENV_ROOT=~/.rbenv
+
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

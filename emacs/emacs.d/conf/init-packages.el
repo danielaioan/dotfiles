@@ -74,7 +74,6 @@
       undo-tree
 ;;    wakatime-mode
       web-mode
-      ws-butler
       yaml-mode
       yasnippet
       elixir-yasnippets

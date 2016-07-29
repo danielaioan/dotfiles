@@ -12,61 +12,39 @@ Purple="\033[0;35m"       # Purple
 Cyan="\033[0;36m"         # Cyan
 White="\033[0;37m"        # White
 
-echo "\n$Green Configuring at $Purple$PWD$Color_Off"
+info(){
+  printf "$Green DOTFILES INSTALLER:$Color_Off $Purple%s$Color_Off\n" "$1"
+}
 
-echo "$Green Configuring vim links $Color_Off"
-if [ -s ~/.vim ]; then
-  rm -rf ~/.vim.bkp
-  mv ~/.vim ~/.vim.bkp
-fi
-ln -sfi ~/dotfiles/vim ~/.vim
+log(){
+  printf "$Green DOTFILES INSTALLER:$Color_Off %s\n" "$1"
+}
 
-if [ -s ~/.vimrc ]; then
-  rm -rf ~/.vimrc.bkp
-  mv ~/.vimrc ~/.vimrc.bkp
-fi
-ln -sfi ~/dotfiles/vim/vimrc ~/.vimrc
+DOTFILES_PATH=$(pwd)
+HOME=$(cd ~/; pwd)
 
-echo "$Green Configuring emacs links $Color_Off"
-if [ -s ~/.emacs.d ]; then
-  rm -rf ~/.emacs.d.bkp
-  mv ~/.emacs.d ~/.emacs.d.bkp
-fi
-ln -sfi ~/dotfiles/emacs ~/.emacs.d
+prep_install(){
+  origin=$1
+  target=$2
+  rm -rf ~/$target.bkp
+  mv -f ~/$target ~/$target.bkp
+  log "Linking $DOTFILES_PATH/$origin --> $HOME/$target"
+  ln -sf $DOTFILES_PATH/$origin $HOME/$target
+}
 
-if [ -s ~/.emacs ]; then
-  rm -rf ~/.emacs.bkp
-  mv ~/.emacs ~/.emacs.bkp
-fi
-ln -sfi ~/dotfiles/emacs/.emacs ~/.emacs
+info "Configuring $DOTFILES_PATH to $HOME"
 
-echo "$Green Configuring bash_profile links $Color_Off"
-if [ -s ~/.bash_profile ]; then
-  rm -rf ~/.bash_profile.bkp
-  rm -rf ~/.git-completion.bash.bkp
-  rm -rf ~/.git-prompt.sh.bkp
-  mv ~/.bash_profile ~/.bash_profile.bkp
-  mv ~/.git-completion.bash ~/.git-completion.bash.bkp
-  mv ~/.git-prompt.sh ~/.git-prompt.sh.bkp
-fi
-ln -sfi ~/dotfiles/bash/bash_profile ~/.bash_profile
-ln -sfi ~/dotfiles/bash/git-completion.bash ~/.git-completion.bash
-ln -sfi ~/dotfiles/bash/git-prompt.sh ~/.git-prompt.sh
+info "Setup VIM"
+prep_install "vim" ".vim"
+prep_install "vim/vimrc" ".vimrc"
 
-echo "$Green Configuring vagrant links using Copy path $Color_Off"
-if [ -s ~/Vagrantfile ]; then
-  rm -rf ~/Vagrantfile.bkp
-  rm -rf ~/.vagrant.bkp
-  rm -rf ~/.vagrant.d.bkp
-  mv ~/Vagrantfile ~/Vagrantfile.bkp
-  mv ~/.vagrant ~/.vagrant.bkp
-  mv ~/.vagrant.d ~/.vagrant.d.bkp
-fi
-ln -sfi ~/Copy/Work/VM/Vagrant/Vagrantfile ~/Vagrantfile
-ln -sfi ~/Copy/Work/VM/Vagrant/.vagrant ~/.vagrant
-ln -sfi ~/Copy/Work/VM/Vagrant/.vagrant.d ~/.vagrant.d
+info "Setup EMACS"
+prep_install "emacs/emacs.d" ".emacs.d"
+prep_install "emacs/emacs" ".emacs"
 
+info "Setup bash_profile"
+prep_install "bash" ".bash"
+prep_install "bash/profile" ".bash_profile"
 
-
-echo "$Green Reloading bash_profile $Color_Off\n"
+info "Reloading bash"
 source ~/.bash_profile
