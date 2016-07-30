@@ -4,8 +4,9 @@
 *elpa*
 .netrwhist
 .DS_Store
-/emacs/ac-comphist.dat
-/emacs/elpa
-/emacs/auto-save-list
 *.eld
 *.dat
+/emacs/emacs.d/ac-comphist.dat
+/emacs/emacs.d/elpa
+/emacs/emacs.d/auto-save-list
+/emacs/emacs.d/eshell/history

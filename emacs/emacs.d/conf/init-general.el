@@ -34,8 +34,6 @@
 
 (provide 'init-general)
 
-;;(add-hook 'after-init-hook 'inf-ruby -switch-setup)
-
 (defalias 'redo 'undo-tree-redo)
 (global-set-key (kbd "C-z") 'undo) ; 【Ctrl+z】
 
