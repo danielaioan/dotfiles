@@ -2,18 +2,16 @@
 
 ;; That file contains my-packages list and a dolist function that install each package
 ;; This idea of managing packages was stolen from: https://github.com/rranelli/emacs-dotfiles
-
 (require 'package)
-
-;;(add-to-list 'package-archives
-;;             '("melpa" . "https://melpa.org/packages/"))
-;;(when (< emacs-major-version 24)
-  ;; For important compatibility libraries like cl-lib
-;;  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
-
 (add-to-list 'package-archives
-                   '("melpa" . "http://melpa.milkbox.net/packages/") t)
-
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives
+             '("melpa-milkbox" . "http://melpa.milkbox.net/packages/") t)
+(when (< emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 (package-initialize)
 
 
