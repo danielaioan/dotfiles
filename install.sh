@@ -41,6 +41,9 @@ prep_install "vim/vimrc" ".vimrc"
 info "Setup EMACS"
 prep_install "emacs/emacs.d" ".emacs.d"
 prep_install "emacs/emacs" ".emacs"
+cat > $HOME/.emacs_bash <<EOF
+. ~/.bash_profile
+EOF
 
 info "Setup bash_profile"
 prep_install "bash" ".bash"
