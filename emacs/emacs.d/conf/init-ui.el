@@ -1,25 +1,23 @@
-;; theme options
+;;Starts on fullscreen mode
+(run-with-idle-timer 0.0 nil 'toggle-frame-fullscreen)
+
+;; custom theme options
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/base16")
-(load-theme 'vibrant-ink t)
 
-;;(deftheme vibrant-ink "DOCSTRING preferred color for comments")
-
-;(custom-theme-set-faces 'undefined
-;;                        '(font-lock-comment-face ((t (:foreground "#714e7a" ))))
-;;                        '(font-lock-comment-delimiter-face ((t (:foreground "#714e7a" ))))
-;;)
-
+;; load theme
+(load-theme 'gruvbox t)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :family "Monaco"))))
- '(font-lock-string-face ((t (:foreground "#54c444"))))
- '(font-lock-comment-face ((t (:foreground "#a347d1" ))))
- '(cursor ((t (:background "#ffffff"))))
+ '(default ((t (:stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 130 :width normal :family "Monaco"))))
+)
+
+(custom-theme-set-faces
+ 'gruvbox
+ '(default ((t (:background "#111111"))))
 )
 
 (setq
@@ -34,13 +32,10 @@
  redisplay-dont-pause t
  )
 
-;; other options
-;;(tool-bar-mode -1)
+;; Hide Emacs bars forever
+(menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-
-
-
 
 
 ;; line numbers

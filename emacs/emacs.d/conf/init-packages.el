@@ -76,10 +76,14 @@
       undo-tree
 ;;    wakatime-mode
       web-mode
-;     ws-butler
+      ws-butler
       yaml-mode
       yasnippet
       elixir-yasnippets
+
+      ;; Themes
+      monokai-theme
+      gruvbox-theme
 )
   "A list of packages to be installed at application lauch.")
 
