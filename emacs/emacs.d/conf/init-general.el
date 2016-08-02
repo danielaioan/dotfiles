@@ -1,13 +1,10 @@
-;;Starts on fullscreen mode
-(run-with-idle-timer 0.1 nil 'toggle-frame-fullscreen)
-
 ;; Starts maximized
 ;;(custom-set-variables
 ;;   '(initial-frame-alist (quote ((fullscreen . maximized)))))
 
 (setq
  ;; default directory
- default-directory (concat (getenv "HOME") "/Workspace/projects/paas")
+ default-directory (concat (getenv "HOME") "/Workspace/projects")
  ;; disable backup files
  make-backup-files nil
  auto-save-default nil
