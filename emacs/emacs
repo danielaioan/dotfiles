@@ -3,10 +3,10 @@
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/conf" user-emacs-directory))
 
 (require 'init-constants)
-(require 'init-ui)
+(require 'init-packages)
 (require 'init-path)
 (require 'init-general)
-(require 'init-packages)
+(require 'init-ui)
 (require 'init-async)
 (require 'init-yasnippet)
 (require 'init-helm)
@@ -47,5 +47,6 @@
 (require 'init-sml-mode)
 
 ;; theme cursor background color
-(set-face-background 'hl-line "#2d3335")
-(set-face-foreground 'highlight nil)
+;;(set-face-background 'hl-line "#2d3335")
+;;(set-face-foreground 'highlight nil)
+
