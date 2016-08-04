@@ -19,13 +19,14 @@
   '(
       ac-inf-ruby
       ac-php
-;;    ace-window
+      ace-jump-mode
+      ace-window
       async
 ;;    auto-complete
 ;;    auto-package-update
-;;    avy
+      avy
       bundler
-;;      company
+;;    company
 ;;    company-inf-ruby
 ;;    company-emoji
 ;;    column-marker

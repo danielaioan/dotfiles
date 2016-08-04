@@ -45,8 +45,8 @@
 (require 'init-ruby-end)
 (require 'init-ws-butler)
 (require 'init-sml-mode)
+(require 'init-avy)
 
 ;; theme cursor background color
 ;;(set-face-background 'hl-line "#2d3335")
 ;;(set-face-foreground 'highlight nil)
-
