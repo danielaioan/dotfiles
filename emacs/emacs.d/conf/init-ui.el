@@ -15,10 +15,12 @@
  '(default ((t (:stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 130 :width normal :family "Monaco"))))
 )
 
+;; Customize gruvbx theme
 (custom-theme-set-faces
  'gruvbox
  '(default ((t (:background "#111111"))))
-)
+ '(linum ((t (:background "#111111" :foreground nil))))
+ )
 
 (setq
  ;; better startup

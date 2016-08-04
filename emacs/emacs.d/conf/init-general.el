@@ -1,7 +1,3 @@
-;; Starts maximized
-;;(custom-set-variables
-;;   '(initial-frame-alist (quote ((fullscreen . maximized)))))
-
 (setq
  ;; default directory
  default-directory (concat (getenv "HOME") "/Workspace/projects")
