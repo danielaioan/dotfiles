@@ -23,19 +23,19 @@
 ;;
 
 ;; variables
-(defvar default-project-source (path-join *user-home-directory* "Workspace/projects/"))
+(defvar default-project-source (path-join *user-home-directory* "Workspace"))
 
 (defvar project-sources
   (list
    default-project-source
-   (path-join *user-home-directory* "Workspace/projects/paas/")))
+   (path-join *user-home-directory* "/projects")))
 
 ;; helm integration for opening Workspace/projects
 ;; Jumping between Workspace/projects
 ;;
 (defvar rr/project-sources
-  '("~/Workspace/projects/"
-    "~/Workspace/projects/paas/"))
+  '("~/Workspace/"
+    "~/Workspace/projects/"))
 
 (defvar rr/default-file-regexps
   '("Gemfile$"
