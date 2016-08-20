@@ -17,74 +17,80 @@
 
 (defvar my-packages
   '(
-      ac-inf-ruby
-      ac-php
-      ace-jump-mode
-      ace-window
-      async
-;;    auto-complete
-;;    auto-package-update
-      avy
-      bundler
-;;    company
-;;    company-inf-ruby
-;;    company-emoji
-;;    column-marker
-      dash
-      dash-functional
-;;    dash-at-point
-;;    discover-my-major
-;;    easy-kill
-      eshell
-;;    expand-region
-      f
-      fill-column-indicator
-;;    floobits
-      flycheck
-;;    flymake-ruby
-;;    git-gutter
-;;    git-timemachine
-      guide-key
-      helm
-;;    helm-ag
-      helm-bundle-show
-      helm-flycheck
-      helm-robe
-      helm-projectile
-      highlight-indentation
-      indent-guide
-      inf-ruby
-;;    ido-vertical-mode
-      magit
-      neotree
-;;    on-screen
-      php-mode
-      popup
-      projectile
-      projectile-rails
-      rake
-      rbenv
-;;    restclient
-      robe
-      rspec-mode
-      ruby-end
-      ruby-test-mode
-      ruby-tools
-      rubocop
-      rvm
-      smartparens
-      sml-mode
-      undo-tree
-;;    wakatime-mode
-      web-mode
-      ws-butler
-      yaml-mode
-      yasnippet
-      elixir-yasnippets
+    ac-inf-ruby
+    ac-php
+    ace-jump-mode
+    ace-window
+    async
+    ;;    auto-complete
+    ;;    auto-package-update
+    avy
+    bundler
+    ;;    company
+    ;;    company-inf-ruby
+    ;;    company-emoji
+    ;;    column-marker
+    crux
+    dash
+    dash-functional
+    ;;    dash-at-point
+    ;;    discover-my-major
+    ;; easy-kill
+    elfeed
+    elfeed-goodies
+    elfeed-org
+    elfeed-web
+    eshell
+    ;;    expand-region
+    f
+    fill-column-indicator
+    ;;    floobits
+    flycheck
+    ;;    flymake-ruby
+    ;;    git-gutter
+    ;;    git-timemachine
+    gnus-desktop-notify
+    guide-key
+    helm
+    ;;    helm-ag
+    helm-bundle-show
+    helm-flycheck
+    helm-robe
+    helm-projectile
+    highlight-indentation
+    indent-guide
+    inf-ruby
+    ;;    ido-vertical-mode
+    magit
+    neotree
+    ;;    on-screen
+    php-mode
+    popup
+    projectile
+    projectile-rails
+    rake
+    rbenv
+    ;;    restclient
+    robe
+    rspec-mode
+    ruby-end
+    ruby-test-mode
+    ruby-tools
+    rubocop
+    rvm
+    smartparens
+    sml-mode
+    undo-tree
+    ;;    wakatime-mode
+    web-mode
+    ws-butler
+    yaml-mode
+    yasnippet
+    elixir-yasnippets
 
-      ;; Themes
-      monokai-theme
-      gruvbox-theme
+    ;; Themes
+    monokai-theme
+    gruvbox-theme
 )
   "A list of packages to be installed at application lauch.")
 

@@ -46,6 +46,7 @@
 (require 'init-ws-butler)
 (require 'init-sml-mode)
 (require 'init-avy)
+(require 'init-elfeed)
 
 ;; theme cursor background color
 ;;(set-face-background 'hl-line "#2d3335")

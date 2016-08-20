@@ -39,7 +39,7 @@ function color_my_prompt {
 color_my_prompt
 
 #rbenv path
-export PATH="$HOME/.rbenv/bin:$PATH"
+#export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="$HOME/.rbenv/versions/*/bin:$PATH"
 eval "$(rbenv init -)"
