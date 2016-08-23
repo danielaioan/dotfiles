@@ -18,11 +18,12 @@
 (defvar my-packages
   '(
     ac-inf-ruby
+    ac-html
     ac-php
     ace-jump-mode
     ace-window
     async
-    ;;    auto-complete
+    auto-complete
     ;;    auto-package-update
     avy
     bundler
@@ -78,15 +79,18 @@
     ruby-tools
     rubocop
     rvm
+    s
     smartparens
     sml-mode
     undo-tree
     ;;    wakatime-mode
+    web-beautify
     web-mode
     ws-butler
     yaml-mode
     yasnippet
     elixir-yasnippets
+    toggle-quotes
 
     ;; Themes
     monokai-theme
