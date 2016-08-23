@@ -19,7 +19,7 @@
 (custom-theme-set-faces
  'gruvbox
  '(default ((t (:background "#111111"))))
- '(linum ((t (:background "#111111" :foreground nil))))
+ '(linum ((t (:background "#111111" :foreground "#fdf1a2"))))
  )
 
 (setq
