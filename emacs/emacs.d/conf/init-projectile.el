@@ -1,11 +1,31 @@
-;;; init-projectile.el --- My Projectile configrations
+;;; init-projectile.el --- Propjectile configuration
+;;
+;; Copyright (C) 2015 Brunno dos Santos <emacs at brunno dot me>
+;;
+;; Author: Brunno dos Santos @squiter
+;; URL: http://github.com/squiter/emacs-fast-start
+;;
+;; This file is NOT part of GNU Emacs.
+;;
+;; This program is free software: you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+;;
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+;;
+;; See <http://www.gnu.org/licenses/> for a copy of the GNU General
+;; Public License.
+;;
 ;;; Commentary:
+;; Thanks to Renan Ranelli for open project functions
+
 ;;; Code:
 
 (require 'projectile)
-
-;; projectile-rails
-;;(add-hook 'projectile-mode-hook 'projectile-rails-on)
 
 (global-set-key (kbd "C-x f") 'helm-projectile)
 (global-set-key (kbd "C-c p s a") 'helm-projectile-ack)
@@ -16,30 +36,24 @@
 (setq projectile-completion-system 'helm)
 (setq projectile-switch-project-action 'helm-projectile)
 (setq helm-projectile-sources-list '(helm-source-projectile-buffers-list
-				     helm-source-projectile-files-list))
+                     helm-source-projectile-files-list))
 
 ;;
-;;; Jumping between Workspace/projects (stolen from milhouse)
+;;; Jumping between projects (Thanks to Renan Ranelli)
 ;;
 
 ;; variables
-(defvar default-project-source (path-join *user-home-directory* "Workspace"))
+(defvar default-project-source *projects-directory*)
 
-(defvar project-sources
-  (list
-   default-project-source
-   (path-join *user-home-directory* "/projects")))
+(defvar project-sources *all-project-directories*)
 
-;; helm integration for opening Workspace/projects
-;; Jumping between Workspace/projects
+;; helm integration for opening projects
+;; Jumping between projects
 ;;
-(defvar rr/project-sources
-  '("~/Workspace/"
-    "~/Workspace/projects/"))
+(defvar rr/project-sources *all-project-directories*)
 
 (defvar rr/default-file-regexps
   '("Gemfile$"
-    "mix.exs$"
     "Readme"
     "README"))
 
@@ -47,16 +61,16 @@
   "Bring up a Project search interface in helm."
   (interactive)
   (helm :sources '(rr/helm-open-project--source)
-	:buffer "*helm-list-Workspace/projects*"))
+    :buffer "*helm-list-projects*"))
 
 (defvar rr/helm-open-project--source
   '((name . "Open Project")
     (delayed)
-    (candidates . rr/list-Workspace/projects)
+    (candidates . rr/list-projects)
     (action . rr/open-project)))
 
-(defun rr/list-Workspace/projects ()
-  "Lists all Workspace/projects given project sources."
+(defun rr/list-projects ()
+  "Lists all projects given project sources."
   (->> rr/project-sources
        (-filter 'file-exists-p)
        (-mapcat (lambda (dir) (directory-files dir t directory-files-no-dot-files-regexp)))))
@@ -72,3 +86,20 @@
 
 (provide 'init-projectile)
 ;;; init-projectile.el ends here
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
