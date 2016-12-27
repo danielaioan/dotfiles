@@ -51,3 +51,8 @@ prep_install "bash/profile" ".bash_profile"
 
 info "Reloading bash"
 source ~/.bash_profile
+
+info "installing slate window management application" #https://github.com/jigish/slate
+cd /Applications && curl http://www.ninjamonkeysoftware.com/slate/versions/slate-latest.tar.gz | tar -xz
+prep_install "slate.conf" ".slate"
+
