@@ -52,7 +52,6 @@ alias clean="sudo sync;sudo purge;"
 # file size
 alias find-largest-files="sudo find ./ -xdev -type f -size +999M -exec du -sh {} ';' | sort -rn | head -n50"
 alias find-largest-dirs="sudo du -ahx / | sort -rn | head -20"
-
 alias pg="'/Library/PostgreSQL/9.4/bin/psql' --host 'localhost' --port 5432 --username 'postgres'"
 
 ## DOCKER MAINTENANCE
